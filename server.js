@@ -1,5 +1,9 @@
 import express from 'express';
+import cors from 'cors';
 
+app.use(cors(
+    {origin: 'test.imabhinav.dev'}
+));
 const app = express();
 
 app.get('/', (req, res) => {
