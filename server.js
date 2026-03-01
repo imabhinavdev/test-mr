@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 app.use(cors(
-    {origin: '*'}
+    {origin: 'test.imabhinav.dev'}
 ));
 const app = express();
 
