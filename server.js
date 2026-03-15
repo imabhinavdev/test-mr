@@ -1,16 +1,18 @@
-import express from 'express';
-import cors from 'cors';
+import express from "express";
+import cors from "cors";
 
-app.use(cors(
-    {origin: 'test.imabhinav.dev'}
-));
+app.use(cors({ origin: "test.imabhinav.dev" }));
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
 });
 
 app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-    console.log('http://localhost:3000');
+  console.log("Server is running on port 3000");
+  console.log("http://localhost:3000");
 });
